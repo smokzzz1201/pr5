@@ -6,6 +6,7 @@ const character = {
     defaultHP: 100,
     damageHP: 100,
     elHP: document.getElementById('health-character'),
+    elProgressbar: document.getElementById('progressbar-character'),
 }
 
 const enemy = {
@@ -13,6 +14,7 @@ const enemy = {
     defaultHP: 100,
     damageHP: 100,
     elHP: document.getElementById('health-enemy'),
+    elProgressbar: document.getElementById('progressbar-enemy'),
 }
 
 $btn.addEventListener('click', function() {
@@ -49,9 +51,7 @@ function renderHPLife(person){
  
 }
 function renderProgressbarHP(person) {
-
         person.elProgressbar.style.width = person.damageHP + '%';
-   
 }
 function changeHP(count, person){
     if (person.damageHP < count){
